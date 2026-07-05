@@ -1,6 +1,11 @@
 // Import the necessary function for preloading images
 import { preloadImages } from './utils.js';
 
+if ('scrollRestoration' in history) {
+	history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
 
@@ -11,6 +16,7 @@ const initSmoothScrolling = () => {
 		lerp: 0.1, // Lower values create a smoother scroll effect
 		smoothWheel: true // Enables smooth scrolling for mouse wheel events
 	});
+	lenis.scrollTo(0, { immediate: true });
 
 	// Update ScrollTrigger each time the user scrolls
 	lenis.on('scroll', () => ScrollTrigger.update());
@@ -95,20 +101,15 @@ const triggerFlipOnScroll = (galleryEl, options) => {
 const scroll = () => {
 	// Define the gallery IDs and their options
     const galleries = [
-        { id: '#gallery-1', options: { flip: { absoluteOnLeave: true, scale: false } } },
-        { id: '#gallery-2' },
-        { id: '#gallery-3', options: { flip: { absolute: true, scale: false }, scrollTrigger: { start: 'center center', end: '+=900%' }, stagger: 0.05 } },
-        { id: '#gallery-4' },
-        { id: '#gallery-5' },
-        { id: '#gallery-6' },
-        { id: '#gallery-7' },
-        { id: '#gallery-8', options: { flip: { scale: false } } },
-        { id: '#gallery-9' },
+        { id: '#gallery-hero', options: { scrollTrigger: { start: 'top top', end: '+=300%' } } },
+        { id: '#gallery-next', options: { flip: { scale: false } } },
+        { id: '#gallery-final' },
     ];
 
     // Loop through the galleries and apply the scroll-triggered animations
     galleries.forEach(gallery => {
         const galleryElement = document.querySelector(gallery.id);
+        if (!galleryElement) return;
         triggerFlipOnScroll(galleryElement, gallery.options);
     });
 }

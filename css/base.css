@@ -318,6 +318,17 @@ body #cdawrap {
 	margin: 0;
 }
 
+.gallery-wrap--hero {
+	height: 100vh;
+	height: 100svh;
+	margin: 0 auto;
+	background: var(--color-bg);
+}
+
+.gallery-wrap--final {
+	margin-bottom: 0;
+}
+
 .gallery {
 	position: relative;
 	width: 100%;
@@ -438,6 +449,13 @@ body #cdawrap {
 	font-size: clamp(2rem,5vw,3rem);
 	display: grid;
 	place-items: center;
+	align-content: center;
+	gap: 0.35rem;
+}
+
+.gallery--one .caption small {
+	font-size: clamp(0.75rem,2.4vw,0.95rem);
+	font-weight: 400;
 }
 
 .gallery--switch.gallery--one .caption {
@@ -494,6 +512,12 @@ body #cdawrap {
 
 .gallery--switch.gallery--grid .caption p {
 	margin-top: 0;
+}
+
+.gallery--hero-grid.gallery--grid .caption p {
+	max-width: 90vw;
+	padding: 36vh 8vw 4vh 10vw;
+	line-height: 1.12;
 }
 
 .gallery--stack {
