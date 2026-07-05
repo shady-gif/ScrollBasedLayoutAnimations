@@ -514,10 +514,28 @@ body #cdawrap {
 	margin-top: 0;
 }
 
+.gallery--hero-grid.gallery--grid .caption {
+	place-items: end start;
+}
+
+.gallery--hero-grid.gallery--grid .caption h1,
 .gallery--hero-grid.gallery--grid .caption p {
-	max-width: 90vw;
-	padding: 36vh 8vw 4vh 10vw;
-	line-height: 1.12;
+	width: min(90vw, 720px);
+	margin: 0;
+	padding: 0 8vw 0 10vw;
+	line-height: 1.14;
+}
+
+.gallery--hero-grid.gallery--grid .caption h1 {
+	padding-top: 38vh;
+	font-size: clamp(0.95rem, 4vw, 2.6rem);
+	font-weight: 500;
+}
+
+.gallery--hero-grid.gallery--grid .caption p {
+	margin-top: 0.55rem;
+	font-size: clamp(0.66rem, 2.3vw, 1.25rem);
+	line-height: 1.2;
 }
 
 .gallery--stack {
