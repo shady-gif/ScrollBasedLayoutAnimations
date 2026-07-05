@@ -781,6 +781,30 @@ body #cdawrap {
 	margin-top: -50vh;
 }
 
+.gallery--bento .caption {
+	gap: 1.35rem;
+}
+
+.gallery--bento .caption__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: min(76vw, 30rem);
+	padding: 1rem 1.25rem;
+	border: 2px solid #0176d3;
+	border-radius: 4px;
+	background: #0176d3;
+	color: #fff;
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.gallery--bento .caption__button:nth-child(2) {
+	background: #fff;
+	color: #0176d3;
+}
+
 .gallery--grid10 {
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
