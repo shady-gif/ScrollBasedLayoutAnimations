@@ -515,7 +515,9 @@ body #cdawrap {
 }
 
 .gallery--hero-grid.gallery--grid .caption {
-	place-items: end start;
+	align-content: end;
+	row-gap: 0.5in;
+	place-items: start;
 }
 
 .gallery--hero-grid.gallery--grid .caption h1,
@@ -533,7 +535,7 @@ body #cdawrap {
 }
 
 .gallery--hero-grid.gallery--grid .caption p {
-	margin-top: 0.1rem;
+	margin-top: 0;
 	font-size: clamp(0.66rem, 2.3vw, 1.25rem);
 	line-height: 1.2;
 }
