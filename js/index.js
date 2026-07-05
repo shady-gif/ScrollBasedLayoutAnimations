@@ -101,7 +101,7 @@ const triggerFlipOnScroll = (galleryEl, options) => {
 const scroll = () => {
 	// Define the gallery IDs and their options
     const galleries = [
-        { id: '#gallery-hero', options: { scrollTrigger: { start: 'top top', end: '+=300%' } } },
+        { id: '#gallery-hero', options: { scrollTrigger: { start: 'top top', end: '+=180%' } } },
         { id: '#gallery-next', options: { flip: { scale: false } } },
         { id: '#gallery-final' },
     ];

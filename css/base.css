@@ -325,6 +325,10 @@ body #cdawrap {
 	background: var(--color-bg);
 }
 
+.gallery-wrap--hero + .gallery-wrap {
+	margin-top: 0;
+}
+
 .gallery-wrap--final {
 	margin-bottom: 0;
 }
@@ -515,29 +519,33 @@ body #cdawrap {
 }
 
 .gallery--hero-grid.gallery--grid .caption {
-	align-content: end;
-	row-gap: 0.5in;
-	place-items: start;
+	place-items: end start;
 }
 
-.gallery--hero-grid.gallery--grid .caption h1,
-.gallery--hero-grid.gallery--grid .caption p {
-	width: min(90vw, 720px);
+.gallery--hero-grid.gallery--grid .caption__content {
+	width: min(86vw, 680px);
 	margin: 0;
-	padding: 0 8vw 0 10vw;
-	line-height: 1.14;
+	padding: 0 6vw 7vh 10vw;
 }
 
 .gallery--hero-grid.gallery--grid .caption h1 {
-	padding-top: 38vh;
-	font-size: clamp(0.95rem, 4vw, 2.6rem);
-	font-weight: 500;
+	margin: 0 0 0.35in;
+	font-size: clamp(1.35rem, 5.6vw, 3.2rem);
+	font-weight: 700;
+	line-height: 1.08;
+	letter-spacing: 0;
 }
 
 .gallery--hero-grid.gallery--grid .caption p {
-	margin-top: 0;
-	font-size: clamp(0.66rem, 2.3vw, 1.25rem);
-	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	font-size: clamp(0.78rem, 2.6vw, 1.2rem);
+	line-height: 1.34;
+	letter-spacing: 0;
+}
+
+.gallery--hero-grid.gallery--grid .caption p + p {
+	margin-top: 0.7rem;
 }
 
 .gallery--stack {
@@ -720,7 +728,7 @@ body #cdawrap {
 	grid-template-columns: repeat(3, 32.5vw);
 	grid-template-rows: repeat(4,23vh);
 	justify-content: center;
-    align-content: center;
+    align-content: start;
 }
 
 .gallery--switch.gallery--bento {
